@@ -1,3 +1,3 @@
 import generateRandomBoard from "./generateRandomBoard/generateRandomBoard.js";
 
-console.table(generateRandomBoard(10, 10));
+console.table(generateRandomBoard(6, 3));

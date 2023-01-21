@@ -1,4 +1,4 @@
-const zeroOrOne = (max) => Math.floor(Math.random() * max);
+import Cell from "../CellClass/CellClass.js";
 
 function generateRandomBoard(row, column) {
   const mainArray = [];
@@ -7,7 +7,7 @@ function generateRandomBoard(row, column) {
     const subarray = [];
 
     for (let j = 0; j < column; j++) {
-      subarray.push(zeroOrOne(2));
+      subarray.push(new Cell(true, i, j));
     }
 
     mainArray.push(subarray);
@@ -15,7 +15,5 @@ function generateRandomBoard(row, column) {
 
   return mainArray;
 }
-
-generateRandomBoard(10, 10);
 
 export default generateRandomBoard;
