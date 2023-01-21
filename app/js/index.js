@@ -1,4 +1,3 @@
-let a = 3;
+import generateRandomBoard from "./BoardFunction/generateRandomBoard.js";
 
-a = 4;
-console.table(a);
+generateRandomBoard(10, 10);
