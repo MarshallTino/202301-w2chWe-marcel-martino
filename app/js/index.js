@@ -1,4 +1,3 @@
-let a = 3;
+import generateRandomBoard from "./generateRandomBoard/generateRandomBoard.js";
 
-a = 4;
-console.table(a);
+console.table(generateRandomBoard(6, 3));
