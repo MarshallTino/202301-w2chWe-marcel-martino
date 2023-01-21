@@ -1,19 +1,19 @@
 const zeroOrOne = (max) => Math.floor(Math.random() * max);
 
-function generateRandomBoard(row, col) {
-  const twoDarr = [];
+function generateRandomBoard(row, column) {
+  const mainArray = [];
 
   for (let i = 0; i < row; i++) {
     const subarray = [];
 
-    for (let j = 0; j < col; j++) {
+    for (let j = 0; j < column; j++) {
       subarray.push(zeroOrOne(2));
     }
 
-    twoDarr.push(subarray);
+    mainArray.push(subarray);
   }
 
-  return twoDarr;
+  return mainArray;
 }
 
 generateRandomBoard(10, 10);

@@ -1,3 +1,3 @@
-import generateRandomBoard from "./BoardFunction/generateRandomBoard.js";
+import generateRandomBoard from "./generateRandomBoard/generateRandomBoard.js";
 
-generateRandomBoard(10, 10);
+console.table(generateRandomBoard(10, 10));
