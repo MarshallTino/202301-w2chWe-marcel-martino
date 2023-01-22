@@ -7,7 +7,7 @@ function generateRandomBoard(row, column) {
     const subarray = [];
 
     for (let j = 0; j < column; j++) {
-      subarray.push(new Cell(true, i, j));
+      subarray.push(new Cell(i, j));
     }
 
     mainArray.push(subarray);
