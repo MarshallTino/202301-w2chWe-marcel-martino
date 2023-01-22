@@ -2,14 +2,15 @@ class Cell {
   alive;
   positionX;
   positionY;
-  willBeALive;
-  numberOfNeighbours;
+  numberOfNeighbours = 0;
+  render;
 
-  constructor(positionX, positionY, willBeALive) {
-    this.alive = Math.random() < 0.7;
+  constructor(positionX, positionY, numberOfNeighbours) {
+    this.alive = Math.random() < 0.6;
     this.positionX = positionX;
     this.positionY = positionY;
-    this.willBeALive = willBeALive;
+    this.numberOfNeighbours = numberOfNeighbours;
+    this.render = this.alive ? "⬜" : "⬛";
   }
 
   findNeighbours(newBoard) {
@@ -29,6 +30,19 @@ class Cell {
     }
 
     this.numberOfNeighbours = aliveNeighbours;
+  }
+
+  willBeAlive() {
+    if (this.alive === true && this.numberOfNeighbours < 2) {
+      this.alive = false;
+      this.render = this.alive ? "⬜" : "⬛";
+    } else if (this.alive === true && this.numberOfNeighbours > 3) {
+      this.alive = false;
+      this.render = this.alive ? "⬜" : "⬛";
+    } else if (this.alive === false && this.numberOfNeighbours === 3) {
+      this.alive = true;
+      this.render = this.alive ? "⬜" : "⬛";
+    }
   }
 }
 
